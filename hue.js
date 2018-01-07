@@ -456,7 +456,7 @@ var pollGroups   = [];
 
 function connect() {
 
-    api.getSensors(function (err, sensors) {
+    api.getSensors(function (sensors) {
       adapter.log.info('Hue sensors:');
       adapter.log.info(JSON.stringify(sensors));
     });
