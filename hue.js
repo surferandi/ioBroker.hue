@@ -455,6 +455,12 @@ var groupIds     = {};
 var pollGroups   = [];
 
 function connect() {
+
+    api.getSensors(function (err, sensors) {
+      adapter.log.info('Hue sensors:');
+      adapter.log.info(JSON.stringify(sensors));
+    });
+
     api.getFullState(function (err, config) {
         if (err) {
             adapter.log.warn('could not connect to ip');
