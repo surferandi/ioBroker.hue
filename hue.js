@@ -468,8 +468,8 @@ function connect() {
 
         var channelNames = [];
 
-        console.log('Hue config:');
-        console.log(JSON.stringify(config));
+        adapter.log.info('Hue config:');
+        adapter.log.info(JSON.stringify(config));
 
         // Create/update lamps
         adapter.log.info('creating/updating light channels');
